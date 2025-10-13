@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Armada Labs — Coming Soon</title>
+  <meta name="description" content="Armada Labs — Building the next wave of intelligent products.">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --fg:#f4f4f4;
+      --muted:#b7b7b7;
+      --accent:#7dd3fc;
+      --maxw:780px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+      background: var(--bg);
+      color: var(--fg);
+      display:flex;
+      min-height:100dvh;
+    }
+    .wrap{
+      margin:auto;
+      width:100%;
+      max-width:var(--maxw);
+      padding:24px;
+      text-align:center;
+    }
+    .logo{
+      display:block;
+      margin:0 auto 28px;
+      width:min(680px, 90vw);
+      height:auto;
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,.4));
+    }
+    h1{
+      margin:4px 0 12px;
+      font-weight:650;
+      font-size: clamp(26px, 3.2vw, 36px);
+      letter-spacing:.2px;
+    }
+    p{
+      margin:0 auto 18px;
+      color:var(--muted);
+      max-width:56ch;
+      line-height:1.6;
+      font-size: clamp(16px, 2vw, 18px);
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:16px;
+      background:#111;
+      border:1px solid #242424;
+      color:var(--fg);
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      transition:.2s ease;
+    }
+    .cta:hover{transform:translateY(-1px); border-color:#2f2f2f}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin:22px auto 0;
+      max-width:560px;
+    }
+    .chip{
+      border:1px solid #242424;
+      border-radius:999px;
+      padding:8px 12px;
+      color:#d9d9d9;
+      font-size:14px;
+      opacity:.9;
+    }
+    footer{
+      margin-top:40px;
+      font-size:14px;
+      color:#7a7a7a;
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="logo" src="assets/Armada-Labs-Logo-Wide.jpg" alt="Armada Labs logo">
+    <h1>Armada Labs</h1>
+    <p>Building the next wave of intelligent products.<br>We’re crafting a new fleet of AI‑powered tools — launching soon.</p>
+
+    <a class="cta" href="mailto:hello@armadalabs.co.uk">
+      <span aria-hidden="true">✉️</span> Contact us: hello@armadalabs.co.uk
+    </a>
+
+    <div class="grid" role="list" aria-label="Focus areas">
+      <div class="chip" role="listitem">Design × Data × AI</div>
+      <div class="chip" role="listitem">Prototypes & Dashboards</div>
+      <div class="chip" role="listitem">APIs & Micro‑SaaS</div>
+    </div>
+
+    <footer>© <span id="y"></span> Armada Labs Ltd · Registered in England & Wales</footer>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
