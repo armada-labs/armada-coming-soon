@@ -175,6 +175,9 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .card-type { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; color: var(--muted); margin: 10px 0 20px; }
 .card-body { font-size: 15.5px; line-height: 1.6; color: var(--card-body); margin: 0; text-wrap: pretty; }
 .card-meta { font-size: 13px; line-height: 1.5; color: var(--faint); margin: 26px 0 0; border-top: 1px solid var(--card-divider); padding-top: 18px; }
+.card, .card h2, .card-domain, .card-type, .card-body, .card-meta { transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease; }
+.card-remy { --card-accent: #bd5757; }
+.card-penwell { --card-accent: #3b3be0; }
 
 .studio { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; }
 .studio .eyebrow { margin: 0; }
@@ -216,11 +219,24 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .nav-links a:hover { color: var(--fg-strong); }
   .hero-cta .link:hover { color: var(--fg-strong); }
   .card:hover { border-color: var(--card-border-hover); background: var(--card-bg-hover); color: var(--fg); }
+  .card-remy:hover, .card-penwell:hover { background: var(--card-accent); border-color: var(--card-accent); color: #ffffff; }
+  .card-remy:hover h2, .card-penwell:hover h2,
+  .card-remy:hover .card-domain, .card-penwell:hover .card-domain,
+  .card-remy:hover .card-type, .card-penwell:hover .card-type,
+  .card-remy:hover .card-body, .card-penwell:hover .card-body,
+  .card-remy:hover .card-meta, .card-penwell:hover .card-meta { color: #ffffff; }
+  .card-remy:hover .card-meta, .card-penwell:hover .card-meta { border-top-color: rgba(255,255,255,0.3); }
   .footer-links a:hover { color: var(--fg-strong); }
 }
 @media (hover: none) {
   a:active { opacity: 0.7; }
   .card:active { border-color: var(--card-border-hover); background: var(--card-bg-hover); opacity: 1; }
+  .card-remy:active, .card-penwell:active { background: var(--card-accent); border-color: var(--card-accent); color: #ffffff; }
+  .card-remy:active h2, .card-penwell:active h2,
+  .card-remy:active .card-domain, .card-penwell:active .card-domain,
+  .card-remy:active .card-type, .card-penwell:active .card-type,
+  .card-remy:active .card-body, .card-penwell:active .card-body,
+  .card-remy:active .card-meta, .card-penwell:active .card-meta { color: #ffffff; }
   .btn:active { background: var(--fg-strong); opacity: 1; }
 }
 
@@ -276,6 +292,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .hero-cta { flex-direction: column; align-items: stretch; gap: 6px; }
   .hero-cta .btn { width: 100%; }
   .hero-cta .link { text-align: center; padding: 13px 10px; }
+}
+@media (max-width: 480px) {
   .brand span { display: none; }
   .nav-links { gap: 18px; }
 }
