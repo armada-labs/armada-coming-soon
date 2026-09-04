@@ -120,8 +120,13 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   pointer-events: none;
   opacity: 0;
   transition: opacity 900ms ease;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+  /* Horizontal band is anchored to the 1060px container: contour on the far left, dark behind the text column, contour again on the right. */
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(50% - 660px), transparent calc(50% - 510px), transparent calc(50% + 90px), #000 calc(50% + 320px)),
+                      linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+          mask-image: linear-gradient(to right, #000 0, #000 calc(50% - 660px), transparent calc(50% - 510px), transparent calc(50% + 90px), #000 calc(50% + 320px)),
+                      linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
+          mask-composite: intersect;
 }
 .hero-bg.is-ready { opacity: 0.9; }
 .hero-bg canvas { width: 100% !important; height: 100% !important; display: block; }
