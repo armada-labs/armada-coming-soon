@@ -4,7 +4,8 @@
  * Sends the enquiry to the studio inbox through Postmark.
  *
  * Environment variables (set in the Vercel project):
- *   POSTMARK_SERVER_TOKEN  Server API token from the Postmark account.   (required)
+ *   POSTMARK_SERVER_TOKEN  Server API token from the Postmark account.   (required;
+ *                          POSTMARK_API_KEY is accepted as an alias)
  *   CONTACT_TO             Inbox that receives enquiries.                 (default hello@armadalabs.co.uk)
  *   CONTACT_FROM           Sender address. Must be a verified Postmark    (default hello@armadalabs.co.uk)
  *                          sender signature or on a verified domain.
@@ -117,12 +118,12 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const token = process.env.POSTMARK_SERVER_TOKEN;
+  const token = process.env.POSTMARK_SERVER_TOKEN || process.env.POSTMARK_API_KEY;
   const to = process.env.CONTACT_TO || 'hello@armadalabs.co.uk';
   const from = process.env.CONTACT_FROM || 'hello@armadalabs.co.uk';
 
   if (!token) {
-    console.error('[contact] POSTMARK_SERVER_TOKEN is not set; enquiry not sent', { name, email, organisation });
+    console.error('[contact] POSTMARK_SERVER_TOKEN / POSTMARK_API_KEY is not set; enquiry not sent', { name, email, organisation });
     respond(req, res, 503, { success: false, error: 'The contact form is not configured yet. Please email hello@armadalabs.co.uk.' }, '/contact?error=unavailable#contact-form');
     return;
   }

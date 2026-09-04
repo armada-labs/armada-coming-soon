@@ -19,7 +19,7 @@ Environment variables to set on the Vercel project:
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `POSTMARK_SERVER_TOKEN` | yes | Server API token from the Armada Labs Postmark account |
+| `POSTMARK_SERVER_TOKEN` | yes | Server API token from the Armada Labs Postmark account (`POSTMARK_API_KEY` also accepted) |
 | `CONTACT_TO` | no | Inbox that receives enquiries (default `hello@armadalabs.co.uk`) |
 | `CONTACT_FROM` | no | Sender address; must be a verified Postmark sender or domain (default `hello@armadalabs.co.uk`) |
 
