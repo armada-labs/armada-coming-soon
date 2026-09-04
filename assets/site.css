@@ -89,7 +89,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   border-bottom: 1px solid var(--hairline);
 }
 .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
-.brand img { width: 34px; height: 34px; border-radius: 7px; flex: none; }
+.brand img { width: auto; height: 34px; flex: none; }
 .brand span { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
 .nav-links {
   display: flex;
@@ -194,7 +194,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .approach p.body { font-size: 15px; line-height: 1.65; color: var(--body); margin: 0; text-wrap: pretty; }
 
 .contact { padding: 96px 0 110px; text-align: center; }
-.contact img { width: 52px; height: 52px; border-radius: 10px; margin: 0 auto 32px; }
+.contact img { width: auto; height: 52px; margin: 0 auto 32px; }
 .contact h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 600; letter-spacing: -0.02em; margin: 0; text-wrap: pretty; }
 .contact p { font-size: 16.5px; line-height: 1.6; color: var(--body); max-width: 44ch; margin: 18px auto 0; text-wrap: pretty; }
 .contact .btn { margin-top: 36px; padding: 14px 30px; max-width: 100%; }
