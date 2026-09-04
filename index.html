@@ -1,107 +1,166 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Armada Labs — Coming Soon</title>
-  <meta name="description" content="Armada Labs — Building the next wave of intelligent products.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Armada Labs — Independent product studio</title>
+  <meta name="description" content="Armada Labs builds and runs its own software for UK healthcare. Remy, a healthcare CRM, and Penwell, AI dictation for Cliniko, are in live clinical use today.">
   <meta name="robots" content="index,follow">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
-  <style>
-    :root{
-      --bg:#0b0b0b;
-      --fg:#f4f4f4;
-      --muted:#b7b7b7;
-      --accent:#7dd3fc;
-      --maxw:780px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
-      background: var(--bg);
-      color: var(--fg);
-      display:flex;
-      min-height:100dvh;
-    }
-    .wrap{
-      margin:auto;
-      width:100%;
-      max-width:var(--maxw);
-      padding:24px;
-      text-align:center;
-    }
-    .logo{
-      display:block;
-      margin:0 auto 28px;
-      width:min(680px, 90vw);
-      height:auto;
-      filter: drop-shadow(0 6px 24px rgba(0,0,0,.4));
-    }
-    h1{
-      margin:4px 0 12px;
-      font-weight:650;
-      font-size: clamp(26px, 3.2vw, 36px);
-      letter-spacing:.2px;
-    }
-    p{
-      margin:0 auto 18px;
-      color:var(--muted);
-      max-width:56ch;
-      line-height:1.6;
-      font-size: clamp(16px, 2vw, 18px);
-    }
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin-top:16px;
-      margin-bottom:16px;
-      background:#111;
-      border:1px solid #242424;
-      color:var(--fg);
-      padding:12px 18px;
-      border-radius:999px;
-      text-decoration:none;
-      transition:.2s ease;
-    }
-    .cta:hover{transform:translateY(-1px); border-color:#2f2f2f}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:14px;
-      margin:22px auto 0;
-      max-width:560px;
-    }
-    .chip{
-      border:1px solid #242424;
-      border-radius:999px;
-      padding:8px 12px;
-      color:#d9d9d9;
-      font-size:14px;
-      opacity:.9;
-    }
-    footer{
-      margin-top:40px;
-      font-size:14px;
-      color:#7a7a7a;
-    }
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
+  <meta name="theme-color" content="#070708">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://www.armadalabs.studio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Armada Labs">
+  <meta property="og:title" content="Armada Labs — Independent product studio">
+  <meta property="og:description" content="Software for healthcare, designed, built and operated in-house. Two products in live clinical use today.">
+  <meta property="og:url" content="https://www.armadalabs.studio/">
+  <meta property="og:image" content="https://www.armadalabs.studio/assets/Armada-Logo-Square.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/armada-mark.svg">
+  <link rel="apple-touch-icon" href="/assets/Armada-Logo-Square.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <main class="wrap">
-    <img class="logo" src="assets/Armada-Labs-Logo-Wide.png" alt="Armada Labs logo">
-    <p>Building the next wave of intelligent products.<br>We’re crafting a new fleet of AI‑powered tools — launching soon.</p>
+  <div class="container">
 
-    <a class="cta" href="mailto:hello@armadalabs.co.uk">
-      <span aria-hidden="true">✉️</span> Contact us: hello@armadalabs.co.uk
-    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Armada Labs home">
+        <img src="/assets/armada-mark.svg" alt="" width="34" height="34">
+        <span>Armada Labs</span>
+      </a>
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#studio">Studio</a>
+        <a href="/contact" class="contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 
+  <header class="hero" id="top">
+    <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow hero-eyebrow">Independent product studio · United Kingdom</p>
+      <h1>Software for healthcare, designed, built and operated in‑house.</h1>
+      <p class="hero-sub">Armada Labs builds and runs its own products for UK healthcare. Two are in live clinical use today.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn">See the products</a>
+        <a href="/contact" class="link">Get in touch →</a>
+      </div>
+    </div>
+  </header>
 
-    <footer>© <span id="y"></span> Armada Labs Ltd · Registered in England & Wales</footer>
-  </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <div class="container">
+    <section id="products" class="section section-first">
+      <p class="eyebrow">01 — Products</p>
+      <div class="products-grid">
+
+        <a href="https://www.remy.health" target="_blank" rel="noopener" class="card">
+          <div class="card-head">
+            <h2>Remy.</h2>
+            <span class="card-domain">remy.health ↗</span>
+          </div>
+          <p class="card-type">Healthcare CRM</p>
+          <p class="card-body">One calm place to run a private practice. Referrals, inbox, scheduling, billing and compliance in a single system, configured around how each practice works.</p>
+          <p class="card-meta">In live clinical use since February 2026 · Hosted in the UK</p>
+        </a>
+
+        <a href="https://www.penwell.uk" target="_blank" rel="noopener" class="card">
+          <div class="card-head">
+            <h2>penwell.</h2>
+            <span class="card-domain">penwell.uk ↗</span>
+          </div>
+          <p class="card-type">AI dictation for Cliniko</p>
+          <p class="card-body">Speak the note once; Penwell writes it into the right Cliniko fields, polished and ready to review. Nothing dictated is ever stored.</p>
+          <p class="card-meta">Chrome extension · Free 14-day trial</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="studio" class="section studio">
+      <p class="eyebrow">02 — The studio</p>
+      <div>
+        <p class="studio-lede">Armada Labs is run by a product engineer with twenty years across healthcare, government and SaaS.</p>
+        <p class="studio-body">Recent work includes two years at the Care Quality Commission designing the internal assessment and enforcement systems used to regulate healthcare providers, the end‑to‑end digital journey for a £39bn government housing‑grant programme, and national data tools for NHS England.</p>
+      </div>
+    </section>
+
+    <section class="section approach" aria-labelledby="approach-heading">
+      <p class="eyebrow" id="approach-heading">03 — How we work</p>
+      <div class="approach-grid">
+        <div>
+          <p class="approach-index">/ 01</p>
+          <h3>One accountable person</h3>
+          <p class="body">Design, engineering and operations sit with the person you talk to. No handoffs, no implementation partners.</p>
+        </div>
+        <div>
+          <p class="approach-index">/ 02</p>
+          <h3>Regulated-sector grade</h3>
+          <p class="body">UK hosting, audit trails and data protection by default. Built for environments where compliance is not optional.</p>
+        </div>
+        <div>
+          <p class="approach-index">/ 03</p>
+          <h3>Live, then shaped</h3>
+          <p class="body">Small scope shipped early, then refined in production against real clinical use — weeks, not quarters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <img src="/assets/armada-mark.svg" alt="" width="52" height="52">
+      <h2>Working on something in healthcare?</h2>
+      <p>We take on a small amount of work alongside our own products. If it fits, you'll hear back within a day.</p>
+      <a href="/contact" class="btn">Get in touch</a>
+      <p class="contact-cta-line">or email <a href="mailto:hello@armadalabs.co.uk">hello@armadalabs.co.uk</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Armada Labs Studio Ltd · Registered in England &amp; Wales</p>
+      <div class="footer-links">
+        <a href="https://www.remy.health" target="_blank" rel="noopener">remy.health</a>
+        <a href="https://www.penwell.uk" target="_blank" rel="noopener">penwell.uk</a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.12/dist/unicornStudio.umd.js" defer></script>
+  <script>
+    (function () {
+      var el = document.getElementById('hero-bg');
+      if (!el) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var small = window.matchMedia('(max-width: 640px)').matches;
+      function start() {
+        if (!window.UnicornStudio) return;
+        UnicornStudio.addScene({
+          elementId: 'hero-bg',
+          filePath: '/assets/unicorn/hero2.json',
+          fps: small ? 30 : 60,
+          scale: small ? 0.8 : 1,
+          dpi: small ? 1 : 1.5,
+          lazyLoad: false,
+          production: true,
+          altText: '',
+          ariaLabel: '',
+          interactivity: { mouse: { disableMobile: true } }
+        }).then(function (scene) {
+          el.classList.add('is-ready');
+          if (reduce && scene) {
+            /* Show one still frame for people who prefer reduced motion. */
+            setTimeout(function () { scene.paused = true; }, 400);
+          }
+        }).catch(function () { /* background stays the flat page colour */ });
+      }
+      var tag = document.querySelector('script[src*="unicornStudio"]');
+      if (window.UnicornStudio) start(); else if (tag) tag.addEventListener('load', start);
+    })();
+  </script>
 </body>
 </html>
