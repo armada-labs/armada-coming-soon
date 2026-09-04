@@ -12,7 +12,7 @@
     .scene { position: absolute; inset: 0; }
     .scene canvas { width: 100% !important; height: 100% !important; display: block; }
     /* A: exactly what the live hero does on phones */
-    #a .scene { left: 50%; top: 50%; width: 600px; height: 800px; transform: translate(-50%, -50%); inset: auto;
+    #a .scene, #b .scene { left: 50%; top: 50%; width: 600px; height: 800px; transform: translate(-50%, -50%); inset: auto;
       -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
               mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%); }
     pre { margin: 0; padding: 12px; white-space: pre-wrap; word-break: break-all; }
@@ -20,9 +20,9 @@
 </head>
 <body>
   <pre id="info">gathering…</pre>
-  <section id="a"><div class="label">A · as live hero (600×800, dpi≤3, fps 30, mask)</div><div class="scene" id="sa"></div></section>
-  <section id="b"><div class="label">B · plain embed, runtime defaults</div><div class="scene" id="sb"></div></section>
-  <section id="c"><div class="label">C · plain embed, dpi = devicePixelRatio</div><div class="scene" id="sc"></div></section>
+  <section id="a"><div class="label">A · FIXED hash · as live hero (600×800, dpi≤3)</div><div class="scene" id="sa"></div></section>
+  <section id="b"><div class="label">B · ORIGINAL hash · same settings as A</div><div class="scene" id="sb"></div></section>
+  <section id="c"><div class="label">C · FIXED hash · plain embed, runtime defaults</div><div class="scene" id="sc"></div></section>
 
   <script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.12/dist/unicornStudio.umd.js"></script>
   <script>
@@ -44,9 +44,9 @@
       } else { log('webgl: unavailable'); }
     } catch (e) { log('webgl probe failed: ' + e); }
 
-    var file = '/assets/unicorn/contour-mobile-4.json';
+    var FIXED = '/assets/unicorn/hero-mobile.json', ORIGINAL = '/assets/unicorn/contour-mobile-4.json';
     function add(id, opts, name) {
-      return UnicornStudio.addScene(Object.assign({ elementId: id, filePath: file, lazyLoad: false, production: true, altText: '', ariaLabel: '' }, opts))
+      return UnicornStudio.addScene(Object.assign({ elementId: id, lazyLoad: false, production: true, altText: '', ariaLabel: '' }, opts))
         .then(function () {
           setTimeout(function () {
             var el = document.getElementById(id), cv = el.querySelector('canvas');
@@ -54,9 +54,10 @@
           }, 800);
         }).catch(function (e) { log(name + ' failed: ' + e); });
     }
-    add('sa', { fps: 30, scale: 1, dpi: Math.min(window.devicePixelRatio || 1, 3) }, 'A')
-      .then(function () { return add('sb', {}, 'B'); })
-      .then(function () { return add('sc', { dpi: window.devicePixelRatio || 1 }, 'C'); });
+    var hi = { fps: 30, scale: 1, dpi: Math.min(window.devicePixelRatio || 1, 3) };
+    add('sa', Object.assign({ filePath: FIXED }, hi), 'A fixed')
+      .then(function () { return add('sb', Object.assign({ filePath: ORIGINAL }, hi), 'B original'); })
+      .then(function () { return add('sc', { filePath: FIXED }, 'C fixed/defaults'); });
   </script>
 </body>
 </html>
