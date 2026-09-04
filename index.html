@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/site.css?v=20260904n">
+  <link rel="stylesheet" href="/assets/site.css?v=20260904o">
 </head>
 <body>
   <div class="container">
@@ -141,10 +141,10 @@
         if (!window.UnicornStudio) return;
         UnicornStudio.addScene({
           elementId: 'hero-bg',
-          filePath: '/assets/unicorn/contour.json',
+          filePath: small ? '/assets/unicorn/contour-mobile.json' : '/assets/unicorn/contour.json',
           fps: small ? 30 : 60,
           scale: 1,
-          dpi: Math.min(window.devicePixelRatio || 1, small ? 2.5 : 1.5),
+          dpi: Math.min(window.devicePixelRatio || 1, small ? 3 : 1.5),
           lazyLoad: false,
           production: true,
           altText: '',
