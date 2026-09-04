@@ -122,9 +122,9 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   transition: opacity 900ms ease;
   /* Horizontal band is anchored to the 1060px container: contour on the far left, dark behind the text column, contour again on the right. */
   -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(50% - 720px), transparent calc(50% - 540px), transparent calc(50% - 200px), #000 calc(50% + 240px)),
-                      linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+                      linear-gradient(to bottom, transparent 0%, #000 4%, #000 96%, transparent 100%);
           mask-image: linear-gradient(to right, #000 0, #000 calc(50% - 720px), transparent calc(50% - 540px), transparent calc(50% - 200px), #000 calc(50% + 240px)),
-                      linear-gradient(to bottom, transparent 0%, #000 12%, #000 86%, transparent 100%);
+                      linear-gradient(to bottom, transparent 0%, #000 4%, #000 96%, transparent 100%);
   -webkit-mask-composite: source-in;
           mask-composite: intersect;
 }
@@ -259,8 +259,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .nav-links a:not(.contact) { display: none; }
   .hero { padding: 64px 0 60px; }
   .hero-bg {
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 80%, transparent 100%);
-            mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
   }
   .hero-bg.is-ready { opacity: 0.6; }
   .hero-eyebrow { margin-bottom: 22px; }
