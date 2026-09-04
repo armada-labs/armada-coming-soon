@@ -265,6 +265,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   }
   .hero-bg.is-ready { opacity: 0.6; }
   .hero-eyebrow { margin-bottom: 22px; }
+  .hero-eyebrow .eyebrow-sep { display: none; }
+  .hero-eyebrow .eyebrow-place { display: block; }
   .hero h1 { font-size: clamp(36px, 10.5vw, 44px); letter-spacing: -0.028em; }
   .hero-sub { font-size: 17px; margin-top: 24px; }
   .hero-cta { margin-top: 34px; gap: 8px 14px; }
