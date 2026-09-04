@@ -260,8 +260,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .hero { padding: 64px 0 60px; overflow: hidden; }
   /* Draw the scene onto a canvas far wider than the phone so the contour lines are as large as on desktop. */
   .hero-bg {
-    left: 50%; right: auto; width: 300vw; transform: translateX(-50%);
-    top: -60%; bottom: auto; height: 220%;
+    left: 50%; right: auto; width: 260vw; transform: translateX(-50%);
+    top: -50%; bottom: auto; height: 200%;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
             mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
   }
