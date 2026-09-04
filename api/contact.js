@@ -65,7 +65,7 @@ async function sendViaPostmark({ token, from, to, replyTo, subject, textBody, ht
       'X-Postmark-Server-Token': token,
     },
     body: JSON.stringify({
-      From: from,
+      From: `Armada Labs Studio <${from}>`,
       To: to,
       ReplyTo: replyTo,
       Subject: subject,
