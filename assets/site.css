@@ -254,6 +254,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .nav { padding: 18px 0; }
   .brand { gap: 12px; }
   .nav-links { gap: 20px; font-size: 12px; }
+  /* Phones: the sections are a short scroll away, so only Contact stays in the nav. */
+  .nav-links a:not(.contact) { display: none; }
   .hero { padding: 64px 0 60px; }
   .hero-bg {
     -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 28%, #000 68%),
@@ -292,10 +294,6 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .hero-cta { flex-direction: column; align-items: stretch; gap: 6px; }
   .hero-cta .btn { width: 100%; }
   .hero-cta .link { text-align: center; padding: 13px 10px; }
-}
-@media (max-width: 480px) {
-  .brand span { display: none; }
-  .nav-links { gap: 18px; }
 }
 
 
