@@ -258,8 +258,11 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   /* Phones: the sections are a short scroll away, so only Contact stays in the nav. */
   .nav-links a:not(.contact) { display: none; }
   .hero { padding: 64px 0 60px; overflow: hidden; }
-  /* Phones load contour-mobile.json, a copy of the scene zoomed out with fewer lines, so the canvas can stay viewport-sized and render at native density. */
+  /* Phones: draw the scene on a 600x800 canvas, matching the Unicorn editor's preview, centred behind the hero. */
   .hero-bg {
+    left: 50%; right: auto; top: 50%; bottom: auto;
+    width: 600px; height: max(100%, 800px);
+    transform: translate(-50%, -50%);
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
             mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
   }
