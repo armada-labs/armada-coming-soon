@@ -263,16 +263,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
             mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 94%, transparent 100%);
   }
-  .hero-bg.is-ready { opacity: 0.9; }
-  /* Soft shade behind the headline on phones, matching the desktop oval. */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: radial-gradient(75% 52% at 42% 46%, #070708 0%, rgba(7,7,8,0.92) 35%, rgba(7,7,8,0.55) 65%, rgba(7,7,8,0) 100%);
-  }
+  .hero-bg.is-ready { opacity: 1; }
   .hero-eyebrow { margin-bottom: 22px; }
   .hero-eyebrow .eyebrow-sep { display: none; }
   .hero-eyebrow .eyebrow-place { display: block; }
