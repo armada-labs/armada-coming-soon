@@ -197,7 +197,7 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .contact { padding: 96px 0 110px; text-align: center; }
 .contact img { width: auto; height: 52px; margin: 0 auto 32px; }
 .contact h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 600; letter-spacing: -0.02em; margin: 0; text-wrap: pretty; }
-.contact p { font-size: 16.5px; line-height: 1.6; color: var(--body); max-width: 44ch; margin: 18px auto 0; text-wrap: pretty; }
+.contact p { font-size: 16.5px; line-height: 1.6; color: var(--body); max-width: 58ch; margin: 18px auto 0; text-wrap: pretty; }
 .contact .btn { margin-top: 36px; padding: 14px 30px; max-width: 100%; }
 
 .footer {
